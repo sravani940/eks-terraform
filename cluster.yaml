@@ -1,0 +1,16 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: my-cluster
+  region: ap-south-1
+
+vpc:
+  # Use the default VPC
+  id: ""
+
+managedNodeGroups:
+  - name: my-node-group
+    instanceType: t2.micro
+    desiredCapacity: 2
+                           
